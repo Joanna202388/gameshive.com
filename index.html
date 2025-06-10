@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamesHive - Play Monster Survivors Online Free | Browser Game</title>
+    <meta name="description" content="Play Monster Survivors on GamesHive - Free online survival game. Battle monsters, collect resources, and survive in this thrilling browser-based adventure game.">
+    <meta name="keywords" content="GamesHive, Monster Survivors, online games, free games, browser games, survival games, monster games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gameshive.win/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GamesHive - Play Monster Survivors Online Free">
+    <meta property="og:description" content="Experience the ultimate survival challenge in Monster Survivors. Battle fierce creatures and survive in this free online game.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gameshive.win/">
+    <meta property="og:site_name" content="GamesHive">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GamesHive - Monster Survivors Game">
+    <meta name="twitter:description" content="Play Monster Survivors online for free. Survive against monsters in this thrilling browser game.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #007AFF, #5856D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 16px;
+            color: #86868b;
+            font-weight: 500;
+        }
+        
+        main {
+            padding: 40px 0;
+        }
+        
+        .hero-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #1d1d1f, #007AFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #86868b;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        
+        .game-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .game-frame {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(45deg, #007AFF, #5856D6);
+            border-radius: 2px;
+        }
+        
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #424245;
+            margin-bottom: 20px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9ff, #e6f3ff);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 122, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 122, 255, 0.15);
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            font-size: 16px;
+            color: #424245;
+            line-height: 1.6;
+        }
+        
+        .game-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff9500, #ff6b35);
+            border-radius: 12px;
+            color: white;
+        }
+        
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        footer {
+            background: #1d1d1f;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+        
+        .footer-content {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        
+        .play-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #007AFF, #5856D6);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 20px 0;
+        }
+        
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 122, 255, 0.3);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 20px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            .game-container,
+            .content-section {
+                padding: 20px;
+                border-radius: 16px;
+            }
+            
+            .game-frame {
+                height: 400px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .logo {
+                font-size: 28px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .feature-card {
+                padding: 20px;
+            }
+            
+            p {
+                font-size: 16px;
+            }
+            
+            .game-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .game-frame {
+                height: 300px;
+            }
+            
+            .game-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">GamesHive</div>
+                <div class="tagline">Your Ultimate Gaming Destination</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero-section">
+                <h1>Monster Survivors - Epic Survival Adventure</h1>
+                <p class="hero-subtitle">Battle fierce monsters and survive in the ultimate online gaming experience</p>
+                <a href="#game" class="play-button">Play Now - Free Online</a>
+            </section>
+
+            <section class="game-container" id="game">
+                <iframe 
+                    src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
+                    class="game-frame"
+                    title="Monster Survivors Game - Play Online Free"
+                    allowfullscreen>
+                </iframe>
+            </section>
+
+            <section class="content-section">
+                <h2>About Monster Survivors</h2>
+                <p>Monster Survivors is an thrilling survival game that challenges players to outlast waves of dangerous creatures in a hostile environment. Developed with cutting-edge Unity technology, this browser-based adventure delivers console-quality gaming directly to your web browser without any downloads required.</p>
+                
+                <p>In this intense survival experience, you'll need to gather resources, craft weapons, and build defenses while battling increasingly difficult monster hordes. The game features dynamic combat mechanics, strategic resource management, and an ever-evolving challenge that keeps players engaged for hours.</p>
+
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free to Play</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">HD</span>
+                        <span class="stat-label">Graphics Quality</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Replayability</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Game Features & Mechanics</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-title">Intense Combat System</div>
+                        <div class="feature-description">Experience fast-paced battles with intuitive controls and responsive combat mechanics. Master different weapon types and combat strategies to survive.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">Resource Management</div>
+                        <div class="feature-description">Collect, craft, and manage resources strategically. Build shelters, create weapons, and establish sustainable survival systems.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">Progressive Difficulty</div>
+                        <div class="feature-description">Face increasingly challenging monster waves with unique abilities and attack patterns. Adapt your strategy as the game evolves.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">Browser Optimized</div>
+                        <div class="feature-description">Enjoy seamless gameplay across all devices with optimized performance for both desktop and mobile browsers.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>How to Play Monster Survivors</h2>
+                <p>Getting started with Monster Survivors is simple and intuitive. Use your mouse or touch controls to navigate your character through the dangerous world. Click or tap to attack monsters, collect resources scattered throughout the environment, and interact with crafting stations.</p>
+                
+                <p>Your primary objective is survival - eliminate monsters before they overwhelm you while simultaneously gathering materials to improve your equipment and defenses. The game automatically saves your progress, allowing you to continue your survival journey across multiple sessions.</p>
+                
+                <p>As you progress, you'll unlock new abilities, discover better equipment, and face more formidable opponents. The key to success lies in balancing aggressive monster elimination with strategic resource collection and management.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>Why Choose GamesHive for Online Gaming</h2>
+                <p>GamesHive represents the pinnacle of free online gaming, offering premium browser-based experiences without compromises. Our platform is specifically designed to deliver high-quality games that run smoothly across all devices and browsers, ensuring every player can enjoy optimal gaming experiences.</p>
+                
+                <p>We curate only the finest games that meet our strict standards for gameplay quality, technical performance, and entertainment value. Monster Survivors exemplifies our commitment to providing engaging, well-designed games that offer substantial replay value and genuine entertainment.</p>
+                
+                <p>Our mobile-first approach ensures that whether you're gaming on a desktop computer, tablet, or smartphone, you'll experience the same level of quality and responsiveness. No downloads, no installations, no waiting - just instant access to premium gaming entertainment.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 GamesHive. All rights reserved. | Play Monster Survivors and more free online games.</p>
+                <p>Experience the best in browser-based gaming entertainment.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
